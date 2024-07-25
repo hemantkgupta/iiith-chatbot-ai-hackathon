@@ -1,0 +1,177 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.395345878636.495261307103"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.395345878636.859671382630"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.395345878636.1405721055409"
+              }
+            }
+          ],
+          "name": "CaptureMyZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "storetype",
+              "elicitationRequired": true,
+              "type": "AMAZON.LocalBusinessType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.398540926579.1080028629137"
+              }
+            },
+            {
+              "name": "location",
+              "elicitationRequired": true,
+              "type": "AMAZON.City",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.398540926579.757231938033"
+              }
+            }
+          ],
+          "name": "FindTheStoreIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "CaptureMyZodiacSignIntent",
+          "samples": [
+            "I was born on {month} {day} {year}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "storetype",
+              "type": "AMAZON.LocalBusinessType"
+            },
+            {
+              "name": "location",
+              "type": "AMAZON.City"
+            }
+          ],
+          "name": "FindTheStoreIntent",
+          "samples": [
+            "Find {storetype} store in {location}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "get my hack"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born"
+          }
+        ],
+        "id": "Elicit.Slot.395345878636.495261307103"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What date were you born"
+          }
+        ],
+        "id": "Elicit.Slot.395345878636.859671382630"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What year were you born"
+          }
+        ],
+        "id": "Elicit.Slot.395345878636.1405721055409"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the store type"
+          }
+        ],
+        "id": "Elicit.Slot.398540926579.1080028629137"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the location"
+          }
+        ],
+        "id": "Elicit.Slot.398540926579.757231938033"
+      }
+    ]
+  }
+}
