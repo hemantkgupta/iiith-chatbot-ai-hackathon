@@ -114,7 +114,7 @@ class FindTheStoreIntentHandler(AbstractRequestHandler):
         store_name = 'No Store'
         for row in rows:
             stype, loca, name = row.split(',')
-            if stype == store_type  and location == loca:
+            if stype.lower() == store_type  and location == loca:
                 store_name = name
                 break
 
